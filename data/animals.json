@@ -117,6 +117,17 @@
         "hungry"
       ],
       "id": "11"
+    },
+    {
+      "name": "Vardah",
+      "species": "reptile",
+      "diet": "carnivore",
+      "personalityTraits": [
+        "zany",
+        "anxious",
+        "loving"
+      ],
+      "id": "12"
     }
   ]
 }
