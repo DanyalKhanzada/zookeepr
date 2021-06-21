@@ -47,6 +47,7 @@ function filterByQuery(query, animalsArray) {
         return result;
    }
 
+     //Get
    app.get('/api/animals', (req, res) => {
      let results = animals;
      if (req.query) {
@@ -64,8 +65,23 @@ function filterByQuery(query, animalsArray) {
      }
    });
 
+   //Post
+   app.post('/api/animals', (req, res) => {
+     // req.body is where our incoming content will be
+     console.log(req.body);
+     res.json(req.body);
+   });
+   
+   // parse incoming string or array data
+   app.use(express.urlencoded({ extended: true }));
+   // parse incoming JSON data
+   app.use(express.json());
+
+
 app.listen(3001, () => {
     console.log(`API server now on port ${PORT}!!`);
   });
+
+
 
 
